@@ -1,0 +1,20 @@
+
+<!-- <% for (const user of userList ){ %>
+<h1><%=user.name.first %></h1>
+<p>Gender:<%=user.gender%></p>
+<p>Age:<%= user.dob.age%></p>
+<% } %> -->
+
+<table>
+    <tr>
+        <th>Photo</th><th>Name</th><th>Sex</th><th>Age</th>
+    </tr>
+    <% for (const user of userList ){ %>
+        <tr>
+            <td><img src="<% user.picture.thumbnail %>" /></td>
+            <td><%=user.name.first %></td>
+            <td><%=user.gender%></td>
+            <td><%= user.dob.age%></td>
+        </tr>
+    <% } %> 
+</table>
